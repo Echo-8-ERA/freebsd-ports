@@ -1,0 +1,10 @@
+--- include/atoms_NET_SUPPORTED.xmacro.orig	2019-01-27 15:45:19 UTC
++++ include/atoms_NET_SUPPORTED.xmacro
+@@ -2,6 +2,7 @@ xmacro(_NET_SUPPORTED)
+ xmacro(_NET_SUPPORTING_WM_CHECK)
+ xmacro(_NET_WM_NAME)
+ xmacro(_NET_WM_VISIBLE_NAME)
++xmacro(_NET_WM_ICON)
+ xmacro(_NET_WM_MOVERESIZE)
+ xmacro(_NET_WM_STATE_STICKY)
+ xmacro(_NET_WM_STATE_FULLSCREEN)

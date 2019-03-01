@@ -38,6 +38,10 @@ INSTALL_TARGET=	install-strip
 
 CONFLICTS_INSTALL=	i3-gaps
 
+OPTIONS_DEFINE=		ICONS
+ICONS_DESC=			Display window icons
+ICONS_EXTRA_PATCHES=	${PATCHDIR}/icons
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/*.1 ${STAGEDIR}${MANPREFIX}/man/man1/
 
