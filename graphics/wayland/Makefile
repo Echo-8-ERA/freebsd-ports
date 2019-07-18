@@ -19,7 +19,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 
 CFLAGS+=	"-I${LOCALBASE}/include/libepoll-shim"
 
-USES=		autoreconf gmake gnome libtool localbase pathfix pkgconfig tar:xz
+USES=		autoreconf gmake gnome libtool lib32 localbase pathfix pkgconfig tar:xz
 USE_GNOME=	libxslt:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
