@@ -25,7 +25,8 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
 LIB_DEPENDS=	libFAudio.so:audio/faudio \
 		libxml2.so:textproc/libxml2
 
-USES=		bison desktop-file-utils gmake localbase shebangfix tar:xz
+USES=		bison compiler:c11 desktop-file-utils gmake localbase shebangfix tar:xz
+LLD_UNSAFE= 	yes
 
 CONFLICTS_INSTALL=	wine-[0-9]* wine-staging-[0-9]* i386-wine-[0-9]* \
 			i386-wine-staging-[0-9]* i386-wine-devel-[0-9]*
