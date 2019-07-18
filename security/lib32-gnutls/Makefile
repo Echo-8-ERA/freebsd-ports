@@ -6,3 +6,5 @@ MASTERDIR=	${.CURDIR}/../gnutls
 .include "${MASTERDIR}/Makefile"
 
 CONFIGURE_ARGS+=--host=i386-portbld-freebsd
+
+LDFLAGS+=	-lnettle -lgmp #TODO: that's just weird
