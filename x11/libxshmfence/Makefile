@@ -9,6 +9,8 @@ COMMENT=	Shared memory 'SyncFence' synchronization primitive
 
 LICENSE=	MIT
 
+USES=	lib32
+USE_LDCONFIG= yes
 USE_XORG=	xorgproto
 XORG_CAT=	lib
 

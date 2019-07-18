@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	openal-200[0-9]*
 
-USES=		cmake compiler:c11 tar:bzip2
+USES=		cmake compiler:c11 lib32 tar:bzip2
 USE_BINUTILS=	yes
 USE_LDCONFIG=	yes
 

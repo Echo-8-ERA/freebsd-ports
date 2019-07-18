@@ -11,6 +11,8 @@ COMMENT=	X Render extension library
 
 LICENSE=	MIT
 
+USES=	lib32
+USE_LDCONFIG= yes
 XORG_CAT=	lib
 USE_XORG=	x11 xorgproto
 

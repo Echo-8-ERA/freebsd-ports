@@ -131,6 +131,7 @@
     SUBDIR += league-spartan
     SUBDIR += lfpfonts-fix
     SUBDIR += lfpfonts-var
+    SUBDIR += lib32-fontconfig
     SUBDIR += libFS
     SUBDIR += libXfont
     SUBDIR += libXfont2

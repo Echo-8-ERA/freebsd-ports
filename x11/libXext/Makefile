@@ -12,7 +12,8 @@ COMMENT=	X11 Extension library
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe
+USES=		cpe lib32
+USE_LDCONFIG= 	yes # ?
 XORG_CAT=	lib
 USE_XORG=	x11 xau xorgproto
 CPE_VENDOR=	x

@@ -15,6 +15,8 @@ USES=		autoreconf
 BUILD_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:misc/pciids
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:misc/pciids
 
+USES= lib32
+USE_LDCONFIG= yes
 CONFIGURE_ARGS=	--with-pciids-path=${LOCALBASE}/share/pciids
 
 XORG_CAT=	lib

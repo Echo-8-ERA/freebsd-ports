@@ -11,6 +11,8 @@ COMMENT=	Authentication Protocol library for X11
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USES= lib32
+USE_LDCONFIG= yes
 XORG_CAT=	lib
 USE_XORG=	xorgproto
 

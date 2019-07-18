@@ -13,7 +13,8 @@ LICENSE=	MIT
 
 XORG_CAT=	lib
 USE_XORG=	x11 xorgproto
-USES+=	cpe
+USES+=	cpe lib32
+USE_LDCONFIG= yes
 CPE_PRODUCT=	libxfixes
 CPE_VENDOR=	x
 

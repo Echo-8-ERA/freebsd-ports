@@ -14,6 +14,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 XORG_CAT=	util
 
+USES=		lib32
+
 NO_ARCH=	yes
 
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"

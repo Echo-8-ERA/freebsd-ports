@@ -56,10 +56,10 @@ SSL2_DESC=	SSLv2 protocol support
 SSL3_DESC=	SSLv3 protocol support
 ZLIB_DESC=	zlib compression support
 
-USES=		compiler cpe perl5
+USES=		compiler cpe lib32 perl5
 USE_PERL5=	build
 MAKE_ARGS+=	WHOLE_ARCHIVE_FLAG=--whole-archive
-MAKE_ENV+=	LIBRPATH="${PREFIX}/lib" GREP_OPTIONS=
+MAKE_ENV+=	LIBRPATH="${LIBDIR}" GREP_OPTIONS=
 SUB_FILES=	pkg-message
 TEST_TARGET=	test
 
@@ -127,6 +127,11 @@ post-patch:
 	${REINPLACE_CMD} -e 's|SHLIB_VERSION_NUMBER "1.0.0"|SHLIB_VERSION_NUMBER "${OPENSSL_SHLIBVER}"|' \
 		${WRKSRC}/crypto/opensslv.h
 	${REINPLACE_CMD} -e 's|\^GNU ld|GNU|' ${WRKSRC}/Makefile.shared
+.if defined(USE_LIB32)
+	${REINPLACE_CMD} -e 's|/usr/local/lib/engines|/usr/local/lib32/engines|' ${WRKSRC}/crypto/opensslconf.h.in
+	${REINPLACE_CMD} -e 's|my $$multilib = $$fields\[$$idx_multilib\];|my $$multilib = "32";|' ${WRKSRC}/Configure
+	${REINPLACE_CMD} -e 's|LD_LIBRARY_PATH|LD_32_LIBRARY_PATH|' ${WRKSRC}/Makefile.shared
+.endif
 
 post-patch-MAN3-off:
 	${GREP} -L openssl_manual_section ${WRKSRC}/doc/crypto/*.pod | ${XARGS} ${RM}
@@ -138,7 +143,7 @@ do-configure:
 	&& ${SETENV} CC="${CC}" FREEBSDCC="${CC}" CFLAGS="${CFLAGS}" PERL="${PERL}" \
 	./config --prefix=${PREFIX} --openssldir=${OPENSSLDIR} \
 		--install_prefix=${STAGEDIR} \
-		-L${PREFIX}/lib ${CONFIGURE_ARGS}
+		-L${LIBDIR} ${CONFIGURE_ARGS}
 
 post-configure:
 	${REINPLACE_CMD} \
@@ -149,8 +154,8 @@ post-configure:
 
 post-install-SHARED-on:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/openssl \
-	${STAGEDIR}${PREFIX}/lib/lib*.so.${OPENSSL_SHLIBVER} \
-	${STAGEDIR}${PREFIX}/lib/engines/lib*.so
+	${STAGEDIR}${LIBDIR}/lib*.so.${OPENSSL_SHLIBVER} \
+	${STAGEDIR}${LIBDIR}/engines/lib*.so
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}

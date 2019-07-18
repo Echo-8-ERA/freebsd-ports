@@ -310,6 +310,7 @@
     SUBDIR += lean
     SUBDIR += lemon
     SUBDIR += levmar
+    SUBDIR += lib32-gmp
     SUBDIR += libRmath
     SUBDIR += libccd
     SUBDIR += libflame

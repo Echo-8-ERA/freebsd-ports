@@ -20,8 +20,9 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pthread-stubs.pc:devel/libpthread-st
 CONFIGURE_ARGS+=	--disable-build-docs --without-doxygen --enable-xinput
 
 XORG_CAT=	lib
-USES=		cpe gmake gnome python:build
+USES=		cpe gmake gnome lib32 python:build
 USE_GNOME=	libxslt:build
+USE_LDCONFIG= yes
 USE_XORG=	xau xdmcp
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	x
