@@ -5,6 +5,8 @@
 USE_LIB32=	yes
 MESADIR= 	${.CURDIR}/../mesa-libs
 
+OPTIONS_EXCLUDE=WAYLAND
+
 .include "${.CURDIR}/../mesa-libs/Makefile"
 
 DESCR=		${MESADIR}/pkg-descr
