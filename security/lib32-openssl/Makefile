@@ -5,8 +5,6 @@ MASTERDIR=	${.CURDIR}/../openssl
 
 .include "${MASTERDIR}/Makefile"
 
-#TARGET_ARCH=	i386
-
 MACHINE=	i386
 .export-env MACHINE
 
