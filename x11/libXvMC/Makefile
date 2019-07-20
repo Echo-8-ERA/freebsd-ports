@@ -11,7 +11,7 @@ COMMENT=	X Video Extension Motion Compensation library
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe
+USES=		cpe lib32
 XORG_CAT=	lib
 USE_XORG=	x11 xext xv xorgproto
 CPE_VENDOR=	x
