@@ -1963,7 +1963,7 @@ MAKE_ENV+=		LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
 # Add explicit X options to avoid problems with false positives in configure
 .if defined(GNU_CONFIGURE)
 .if defined(USE_LIB32)
-CONFIGURE_ARGS+=--x-libraries=${LIBDIR} --x-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=--x-libraries=${LOCALBASE}/lib32 --x-includes=${LOCALBASE}/include
 .else
 CONFIGURE_ARGS+=--x-libraries=${LOCALBASE}/lib --x-includes=${LOCALBASE}/include
 .endif
