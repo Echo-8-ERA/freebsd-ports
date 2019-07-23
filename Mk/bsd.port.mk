@@ -3470,7 +3470,7 @@ install-ldconfig-file:
 .      endif
 .    endif
 .    if defined(USE_LDCONFIG32)
-.      if ${USE_LDCONFIG32} != "${LOCALBASE}/lib32" && !defined(INSTALL_AS_USER)
+.      if !defined(INSTALL_AS_USER)
 	@${ECHO_MSG} "===>   Installing 32-bit ldconfig configuration file"
 .        if defined(NO_MTREE) || ${PREFIX} != ${LOCALBASE}
 	@${MKDIR} ${STAGEDIR}${LOCALBASE}/${LDCONFIG32_DIR}
