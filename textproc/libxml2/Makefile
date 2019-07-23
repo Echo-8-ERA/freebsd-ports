@@ -68,6 +68,10 @@ post-patch:
 .if exists(/usr/lib/libstdc++.so)
 	@${REINPLACE_CMD} -e 's/ -Wno-array-bounds//' ${WRKSRC}/configure
 .endif
+.if defined(USE_LIB32)
+	@${REINPLACE_CMD} -e 's|-L$$with_iconv/lib|-L$$with_iconv/lib32|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-L$${LZMA_DIR}/lib|-L$${LZMA_DIR}/lib32|' ${WRKSRC}/configure
+.endif
 
 .if !defined(MASTERDIR)
 post-install:
