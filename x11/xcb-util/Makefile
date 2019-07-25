@@ -15,7 +15,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 XORG_CAT=	lib
-USES=		gmake tar:bzip2
+USES=		gmake lib32 tar:bzip2
 USE_XORG=	xau xcb xdmcp
 INSTALL_TARGET=	install-strip
 
