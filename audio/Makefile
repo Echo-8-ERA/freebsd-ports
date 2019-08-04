@@ -370,6 +370,7 @@
     SUBDIR += lame
     SUBDIR += lash
     SUBDIR += lib32-openal-soft
+    SUBDIR += lib32-mpg123
     SUBDIR += liba52
     SUBDIR += libaacplus
     SUBDIR += libadplug

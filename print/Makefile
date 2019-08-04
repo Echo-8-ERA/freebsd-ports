@@ -99,6 +99,7 @@
     SUBDIR += latex2rtf
     SUBDIR += latexdiff
     SUBDIR += lgrind
+    SUBDIR += lib32-cups
     SUBDIR += lib32-freetype2
     SUBDIR += libgnomecups
     SUBDIR += libgnomeprint

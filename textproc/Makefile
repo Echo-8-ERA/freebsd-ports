@@ -348,6 +348,7 @@
     SUBDIR += latex2html
     SUBDIR += lib32-expat2
     SUBDIR += lib32-libxml2
+    SUBDIR += lib32-libxslt
     SUBDIR += libabw
     SUBDIR += libcrm114
     SUBDIR += libcroco

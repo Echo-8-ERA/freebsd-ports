@@ -13,7 +13,7 @@ COMMENT?=	The XSLT C library for GNOME
 
 .if !defined(REFERENCE_PORT)
 
-USES+=		cpe gmake gnome localbase libtool pathfix
+USES+=		cpe gmake gnome localbase libtool pathfix lib32
 CPE_VENDOR=	xmlsoft
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip

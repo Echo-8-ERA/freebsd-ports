@@ -19,7 +19,7 @@ LIB_DEPENDS=	libSPIRV-Tools-shared.so:devel/spirv-tools \
 		libvulkan.so:graphics/vulkan-loader
 RUN_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:devel/vulkan-headers
 
-USES=		gmake libtool localbase pkgconfig tar:xz
+USES=		gmake libtool localbase pkgconfig tar:xz lib32
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-spirv-tools

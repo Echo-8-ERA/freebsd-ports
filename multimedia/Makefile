@@ -186,6 +186,7 @@
     SUBDIR += kodi-devel
     SUBDIR += kvazaar
     SUBDIR += l-smash
+    SUBDIR += lib32-libv4l
     SUBDIR += libaacs
     SUBDIR += libass
     SUBDIR += libav

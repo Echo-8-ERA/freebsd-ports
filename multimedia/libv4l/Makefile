@@ -19,7 +19,7 @@ LICENSE_COMB=	dual
 
 LIBV4L_SLAVE?=	no
 
-USES=		tar:bzip2
+USES=		tar:bzip2 lib32
 WRKSRC=		${WRKDIR}/v4l-utils-${PORTVERSION}
 
 .if ${LIBV4L_SLAVE} != compat
