@@ -14,6 +14,7 @@ LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 XORG_CAT=	lib
+USES=		lib32
 USE_XORG=	xorgproto xtrans
 INSTALL_TARGET=	install-strip
 

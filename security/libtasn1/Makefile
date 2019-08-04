@@ -14,7 +14,7 @@ LICENSE=	LGPL21+ GPLv3
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		cpe pkgconfig pathfix gmake libtool
+USES=		cpe pkgconfig pathfix gmake lib32 libtool
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip

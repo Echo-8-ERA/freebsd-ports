@@ -11,8 +11,9 @@ COMMENT=	X11 library
 
 LICENSE=	MIT
 
-USES=		cpe perl5
+USES=		cpe lib32 perl5
 XORG_CAT=	lib
+USE_LDCONFIG= yes
 USE_XORG=	xau xdmcp xtrans xorgproto xcb
 USE_PERL5=	build
 CPE_VENDOR=	x

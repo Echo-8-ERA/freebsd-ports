@@ -14,7 +14,8 @@ LICENSE=	MIT
 
 XORG_CAT=	lib
 USE_XORG=	x11 xext xorgproto
-USES+=	cpe
+USES+=	cpe lib32
+USE_LDCONFIG= yes
 CPE_PRODUCT=	libxinerama
 CPE_VENDOR=	x
 

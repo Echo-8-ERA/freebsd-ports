@@ -21,7 +21,7 @@ LICENSE_FILE_TRIO=	${FILESDIR}/LICENSE.TRIO
 LICENSE_PERMS_TRIO=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 GNU_CONFIGURE=	yes
-USES+=		cpe gmake iconv libtool pathfix pkgconfig shebangfix
+USES+=		cpe gmake lib32 iconv libtool pathfix pkgconfig shebangfix
 CPE_VENDOR=	xmlsoft
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-iconv=${ICONV_PREFIX} \
@@ -67,6 +67,10 @@ post-patch:
 .endfor
 .if exists(/usr/lib/libstdc++.so)
 	@${REINPLACE_CMD} -e 's/ -Wno-array-bounds//' ${WRKSRC}/configure
+.endif
+.if defined(USE_LIB32)
+	@${REINPLACE_CMD} -e 's|-L$$with_iconv/lib|-L$$with_iconv/lib32|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-L$${LZMA_DIR}/lib|-L$${LZMA_DIR}/lib32|' ${WRKSRC}/configure
 .endif
 
 .if !defined(MASTERDIR)

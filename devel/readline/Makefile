@@ -19,7 +19,7 @@ OPTIONS_DEFINE=	TERMCAP DOCS
 OPTIONS_DEFAULT=TERMCAP
 TERMCAP_DESC=	Link against libtermcap
 
-USES=		cpe
+USES=		lib32 cpe
 
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -45,9 +45,12 @@ post-patch:
 
 post-patch-TERMCAP-on:
 	@${REINPLACE_CMD} -e '/SHOBJ_LDFLAGS = / s| = |&-ltermcapw |' ${WRKSRC}/shlib/Makefile.in
+.if defined(USE_LIB32)
+	@${REINPLACE_CMD} -e '/SHOBJ_LDFLAGS = / s| = |&-m32 |' ${WRKSRC}/shlib/Makefile.in
+.endif
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libhistory.so.8 ${STAGEDIR}${PREFIX}/lib/libreadline.so.8
+	${STRIP_CMD} ${STAGEDIR}${LIBDIR}/libhistory.so.8 ${STAGEDIR}${LIBDIR}/libreadline.so.8
 	${INSTALL_DATA} ${WRKSRC}/readline.pc ${STAGEDIR}${PREFIX}/libdata/pkgconfig
 
 .include <bsd.port.mk>

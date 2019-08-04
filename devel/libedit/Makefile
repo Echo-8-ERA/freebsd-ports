@@ -13,7 +13,7 @@ COMMENT=	Command line editor library
 
 LICENSE=	BSD2CLAUSE
 
-USES=		libtool ncurses pathfix
+USES=		lib32 libtool ncurses pathfix
 EDITVERSION=	3.1
 EDITDATE=	20190324
 GNU_CONFIGURE=	yes

@@ -11,7 +11,8 @@ COMMENT=	X client-side cursor loading library
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		cpe
+USES=		cpe lib32
+USE_LDCONFIG= 	yes # ?
 XORG_CAT=	lib
 USE_XORG=	xrender x11 xfixes xorgproto
 CPE_VENDOR=	x

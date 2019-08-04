@@ -20,9 +20,15 @@ LIB_DEPENDS=	libgmp.so:math/gmp \
 		libunistring.so:devel/libunistring
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 
-USES=		compiler:c11 cpe gmake iconv libtool localbase makeinfo \
+USES=		compiler:c11 cpe gmake iconv lib32 libtool localbase makeinfo \
 		pkgconfig tar:xz
 USE_LDCONFIG=	yes
+
+.if defined(USE_LIB32)
+LIBDIRSUFFIX=32
+.else
+LIBDIRSUFFIX=
+.endif
 
 CPE_VENDOR=	gnu
 GNU_CONFIGURE=	yes
@@ -30,7 +36,7 @@ CONFIGURE_ARGS=	--disable-guile \
 		--enable-local-libopts \
 		--with-system-priority-file=${PREFIX}/etc/gnutls/default-priorities \
 		--with-default-trust-store-file=${LOCALBASE}/share/certs/ca-root-nss.crt \
-		--with-trousers-lib=${LOCALBASE}/lib/libtspi.so.1 \
+		--with-trousers-lib=${LOCALBASE}/lib${LIBDIRSUFFIX}/libtspi.so.1 \
 		AUTOGEN=false \
 		ac_cv_type_max_align_t=yes
 MAKE_ENV=	MAKEINFOFLAGS=--no-split

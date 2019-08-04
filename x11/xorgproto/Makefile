@@ -9,6 +9,8 @@ COMMENT=	xorg protocol headers
 
 XORG_CAT=	proto
 
+USES=	lib32
+
 CONFIGURE_ARGS= --without-fop \
 		--without-xmlto \
 		--without-xsltproc \

@@ -12,6 +12,8 @@ LICENSE=	MIT
 
 XORG_CAT=	lib
 
+USES=		lib32
+
 CONFIGURE_ARGS+=--disable-docs --without-xmlto
 
 .include <bsd.port.mk>

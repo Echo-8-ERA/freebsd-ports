@@ -369,6 +369,7 @@
     SUBDIR += ladspa
     SUBDIR += lame
     SUBDIR += lash
+    SUBDIR += lib32-openal-soft
     SUBDIR += liba52
     SUBDIR += libaacplus
     SUBDIR += libadplug

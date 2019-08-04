@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libunistring.so:devel/libunistring
 
-USES=		charsetfix gmake iconv libtool localbase pathfix
+USES=		charsetfix gmake iconv lib32 libtool localbase pathfix
 
 CONFIGURE_ARGS=	--disable-nls \
 		--with-libunistring-prefix=${LOCALBASE} \

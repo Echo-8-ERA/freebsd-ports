@@ -10,6 +10,8 @@ COMMENT=	X Display Manager Control Protocol library
 
 LICENSE=	MIT
 
+USES= lib32
+USE_LDCONFIG= yes
 XORG_CAT=	lib
 USE_XORG=	xorgproto:both
 

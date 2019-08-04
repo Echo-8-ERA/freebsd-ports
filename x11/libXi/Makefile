@@ -14,7 +14,8 @@ LICENSE=	MIT
 XORG_CAT=	lib
 USE_XORG=	x11 xext xfixes xorgproto
 INSTALL_TARGET=	install-strip
-USES+=	cpe
+USES+=	lib32 cpe
+USE_LDCONFIG= yes
 CPE_PRODUCT=	libxi
 CPE_VENDOR=	x
 

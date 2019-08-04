@@ -14,7 +14,7 @@ COMMENT=	OpenGL utility library
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-static
 INSTALL_TARGET=	install-strip
-USES=		libtool pathfix pkgconfig tar:bzip2
+USES=		lib32 libtool pathfix pkgconfig tar:bzip2
 USE_GL=		gl
 USE_LDCONFIG=	yes
 

@@ -17,7 +17,7 @@ CONFIGURE_ENV=	ac_cv_path_AWK_PATH=${AWK}
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-USES=		autoreconf libtool makeinfo pathfix pkgconfig
+USES=		autoreconf lib32 libtool makeinfo pathfix pkgconfig
 
 INFO=		check
 PORTDOCS=	*
