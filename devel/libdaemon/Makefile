@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 CONFIGURE_ARGS=	--disable-lynx
 GNU_CONFIGURE=	yes
-USES=		libtool:keepla pathfix
+USES=		libtool:keepla pathfix lib32
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

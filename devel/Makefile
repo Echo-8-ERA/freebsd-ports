@@ -1120,6 +1120,7 @@
     SUBDIR += lib32-gettext-runtime
     SUBDIR += lib32-glib20
     SUBDIR += lib32-gobject-introspection
+    SUBDIR += lib32-libdaemon
     SUBDIR += lib32-libedit
     SUBDIR += lib32-libepoll-shim
     SUBDIR += lib32-libffi
