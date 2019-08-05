@@ -131,6 +131,7 @@
     SUBDIR += leo_center
     SUBDIR += leofs
     SUBDIR += leveldb
+    SUBDIR += lib32-gdbm
     SUBDIR += libcouchbase
     SUBDIR += libdbi
     SUBDIR += libdbi-drivers

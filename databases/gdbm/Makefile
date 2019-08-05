@@ -15,7 +15,7 @@ LICENSE=	GPLv3+
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-USES=		libtool:keepla readline
+USES=		libtool:keepla readline lib32
 
 MAKE_JOBS_UNSAFE=	yes
 
