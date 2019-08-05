@@ -1128,6 +1128,7 @@
     SUBDIR += lib32-llvm80
     SUBDIR += lib32-pcre
     SUBDIR += lib32-readline
+    SUBDIR += lib32-spirv-tools
     SUBDIR += lib32-xorg-macros
     SUBDIR += libCello
     SUBDIR += libIDL
