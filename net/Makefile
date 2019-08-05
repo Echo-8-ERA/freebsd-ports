@@ -337,6 +337,7 @@
     SUBDIR += ldapsdk
     SUBDIR += ldapsh
     SUBDIR += lft
+    SUBDIR += lib32-avahi-app
     SUBDIR += libarms
     SUBDIR += libbgpdump
     SUBDIR += libcapn

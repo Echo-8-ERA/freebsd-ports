@@ -26,7 +26,7 @@ LIB_DEPENDS?=	libexpat.so:textproc/expat2 \
 USERS?=		${PORTNAME}
 GROUPS?=	${USERS}
 
-USES+=		alias gettext gmake gnome libtool pathfix pkgconfig
+USES+=		alias gettext gmake gnome libtool pathfix pkgconfig lib32
 USE_GNOME+=	glib20 intltool introspection
 USE_GNOME_SUBR=	yes
 USE_LDCONFIG=	yes
