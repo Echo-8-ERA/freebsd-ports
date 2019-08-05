@@ -15,7 +15,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2
 
 PORTSCOUT=	limitw:1,even
 
-USES=		cpe gmake libtool localbase pkgconfig python:build shebangfix
+USES=		cpe gmake lib32 libtool localbase pkgconfig python:build shebangfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-test-socket-dir=${WRKDIR} \
