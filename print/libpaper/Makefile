@@ -12,7 +12,7 @@ COMMENT=	Library providing routines for paper size management
 
 LICENSE=	GPLv2
 
-USES=		libtool
+USES=		libtool lib32
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:C/.([0-9]+)$/+nmu\1/}

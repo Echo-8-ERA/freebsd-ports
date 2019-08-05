@@ -101,6 +101,7 @@
     SUBDIR += lgrind
     SUBDIR += lib32-cups
     SUBDIR += lib32-freetype2
+    SUBDIR += lib32-libpaper
     SUBDIR += libgnomecups
     SUBDIR += libgnomeprint
     SUBDIR += libgnomeprint-reference
