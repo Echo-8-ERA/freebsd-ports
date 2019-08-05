@@ -1116,6 +1116,7 @@
     SUBDIR += lfcbase
     SUBDIR += lfcxml
     SUBDIR += lib32-dbus
+    SUBDIR += lib32-dbus-glib
     SUBDIR += lib32-gettext-runtime
     SUBDIR += lib32-glib20
     SUBDIR += lib32-libedit

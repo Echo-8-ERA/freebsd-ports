@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libexpat.so:textproc/expat2
 
-USES=		cpe gettext gmake gnome libtool localbase pathfix pkgconfig
+USES=		cpe gettext gmake gnome libtool localbase pathfix pkgconfig lib32
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 
