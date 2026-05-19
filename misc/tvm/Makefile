@@ -31,8 +31,8 @@ CMAKE_TESTING_TARGET=	cpptest
 
 LDFLAGS+=	-lexecinfo
 
-OPTIONS_DEFINE=		LLVM
-OPTIONS_DEFAULT=	LLVM
+OPTIONS_DEFINE=		LLVM VULKAN
+OPTIONS_DEFAULT=	LLVM VULKAN
 
 LLVM_VERSION=		${LLVM_DEFAULT}
 LLVM_DESC=		With LLVM support for model compilation
@@ -40,6 +40,12 @@ LLVM_CMAKE_ON=		-DUSE_LLVM=${LOCALBASE}/bin/llvm-config${LLVM_VERSION}
 LLVM_BUILD_DEPENDS=	llvm-config${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 LLVM_RUN_DEPENDS=	llvm-config${LLVM_VERSION}:devel/llvm${LLVM_VERSION}
 
+VULKAN_DESC=		With Vukan support
+VULKAN_CMAKE_ON=	-DUSE_VULKAN=ON
+VULKAN_LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader
+VULKAN_BUILD_DEPENDS=	spirv-as:graphics/spirv-tools \
+			${LOCALBASE}/include/spirv/unified1/spirv.h:graphics/spirv-headers \
+			${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 .include <bsd.port.options.mk>
 
 .if ${ARCH} == powerpc || ${ARCH} == powerpc64
